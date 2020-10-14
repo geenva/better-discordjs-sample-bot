@@ -1,0 +1,69 @@
+const Discord = require("discord.js");
+const client = new Discord.Client();
+const config = require("./config.json");
+
+
+
+client.on("ready", () => {
+  console.log("yay, time to learn js, prefix is ! btw");
+});
+
+client.on("message", (message) => {
+  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+  if (!message.content.startsWith(config.prefix)) return;
+
+    if (command === "help") {
+      message.channel.send("Current commands: \n`!ping`\n`!foo`\n`!eevee`\n`!burnice`\n`!findburnice`\n`!stfu [age] [sex] [location]`");
+      console.log(message.author.tag + " did help command!")
+    } else
+
+    if (command === "ping") {
+      message.channel.send("pong!");
+      console.log(message.author.tag + " did ping command!")
+    } else
+  
+    if (command === "foo") {
+      message.channel.send("bar!");
+      console.log(message.author.tag + " did foo command!")
+    } else
+
+    if (command === "eevee") {
+      message.channel.send("pikachu!");
+      console.log(message.author.tag+ " did eevee command!")
+    } else
+
+    if (command === "burnice") {
+      message.channel.send("a literal walking pink ball, aka a fucking fat kirby!, often known as kind of fat, likes to pinch people, only known to be stopped by the almighty Ben Chow and Lake The Eevee. Please report it to the server owner Lake The Eevee if you see one running around in the wild. Either by pinging or messaging. Thank you for the co-operation");
+      console.log(message.author.tag + " noticed burnice command!")
+    } else
+
+    if (command === "findburnice") {
+      message.channel.send("WOW YOU FOUND A BURNICE, <@441912852710948864> COME DO SOMETHING AAAAAAAAAAAAAAAAAA")
+      console.log(message.author.tag + " FOUND A FRICKING BUNRICE")
+    } else
+
+     if (command === "stfu") {
+      let age = args[0]; 
+      let sex = args[1];
+      let location = args[2];
+      message.reply(`Hello ${message.author.username}, I see you're a ${age} year old ${sex} from ${location}. Wanna shut the fuck up? Thanks.`);
+      console.log(message.author.tag + " got himself to shut up LMAO")
+    } else
+      if (command === "kick") {
+      let member = message.mentions.members.first();
+      member.kick();
+    } else
+    if(command === "say"){
+      let text = args.join(" ");
+      message.delete();
+      message.channel.send(text);
+      console.log(message.author.tag + " said " + stext)
+    }
+  })
+client.login(config.token);
+
+
+
+
+

@@ -1,0 +1,30 @@
+{
+  "name": "better-discordjs-sample-bot",
+  "version": "1.0.0",
+  "description": "a better sample discord.js bot by geneva and lake",
+  "main": "index.js",
+  "dependencies": {
+    "better-sqlite3": "^7.1.1",
+    "enmap": "^5.8.0",
+    "discord.js": "^12.3.1",
+    "fs": "^0.0.1-security",
+    "websocket": "^1.0.32"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geenva/better-discordjs-sample-bot.git"
+  },
+  "keywords": [
+    "discordjs"
+  ],
+  "author": "geneva, Lake The Eevee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geenva/better-discordjs-sample-bot/issues"
+  },
+  "homepage": "https://github.com/geenva/better-discordjs-sample-bot#readme"
+}
